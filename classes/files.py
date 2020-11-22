@@ -1,10 +1,10 @@
-#! python3
+#! python3 
 
 #when typing a windows path be sure to escape the backslash with another bachslash
 print('\\') #this will print "\"
 print('c:\\spam\\eggs.png')
 #or alternative use raw strings 
-print(r'c:/Python39/Python_Projects/Simple_Stuff')
+print(r'c:/Python39/Python_Code/python_notes')
 
 import os #path related functions
 os.path.join('folder1','folder2','folder3') #joins the path according to your OS
@@ -36,3 +36,24 @@ for filename in os.listdir('c:\\automatebook'):
 
 os.makedirs('c:\\delicious\\walnut\\waffles') #this func will create all these folders to complete the path!
 
+#there are 2 types of files
+#plain text and
+#binary (which you cannot open with a text editor)
+
+#to open a file in python use the open() function, which will open it in READ MODE
+helloFile = open('c:\\Python39\\Python_Code\\python_notes\\classes\\simple_text.txt')
+content = helloFile.read() #if i want to read the file i ll need to reuse this line, so i ll save it in a variable
+helloFile.close() #then i need to close the file
+print(content)
+helloFile.close()
+#there is also a readlines method
+helloFile.readlines() #This will return all of the lines as a list of strings
+
+#if i want to write to a file i need to open it to write or append mode
+#write mode will overwrite the file data, whereas append will add to the end of the file
+#if the file doesn't exist, python will create it!
+helloFile = open('c:\\Python39\\Python_Code\\python_notes\\classes\\simple_text2.txt', 'w') #the 'w' indicates the write mode
+helloFile.write('Hello !!!\n')
+helloFile.close() #don't forget to close the file!
+helloFile = open('c:\\Python39\\Python_Code\\python_notes\\classes\\simple_text2.txt', 'a') #the 'a' indicates the write mode
+helloFile.write('\n\nHello again!!!\n')
