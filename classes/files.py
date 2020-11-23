@@ -94,5 +94,28 @@ shutil.move('c:\\delicious\\spamspamspam.txt', 'c:\\delicious\\walnut')
 shutil.move('c:\\delicious\\walnut\\spamspamspam.txt', 'c:\\delicious\\walnut\\eggs.txt')
 
 #Deleting files and folders
+os.makedirs('c:\\empty_folder') #first i ll create and empty folder for the purposes of this example
+os.unlink('c:\\Users\\Aristos\\Desktop\\text.txt') #delete a file!
+os.rmdir('c:\\empty_folder')
+# python allows you to only delete empty folders as a safety mechanism!
+# you will have to use shutil.rmtree() to entirely delete a folder with files
+shutil.rmtree('c:\\delicious')
+shutil.rmtree('c:\\delicious_backup')
+# I deleted the folders and files I created previously, to be able to rerun the program without crashes
 
+# The best practice before deleting files is to do a "Dry Run"
+import os
+os.chdir('c:\\Users\\Aristos\\Desktop')
+for filename in os.listdir():
+    if filename.endswith('.txt'):    #before deleting I will print these files just to be sure. Then uncomment the unlink method and proceed
+        #os.unlink(filename)
+        print(filename) 
+
+# It is always much safer to just send files to the recycle bin, rather than deleting them.
+# First I ll need to pip install it to my folder before i use it, so open a terminal, go to 
+# your destiunation folder and run pip.exe install send2trash
+
+import send2trash
+mytext = open('c:\\Users\\Aristos\\Desktop\\text2.txt','w') #create this short-life txt file.
+send2trash.send2trash('c:\\Users\\Aristos\\Desktop\\text2.txt') #send it to the recycle bin, where it belongs.
 
