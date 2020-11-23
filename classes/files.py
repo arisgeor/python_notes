@@ -46,6 +46,7 @@ helloFile = open('c:\\Python39\\Python_Code\\python_notes\\classes\\simple_text.
 content = helloFile.read() #if i want to read the file i ll need to reuse this line, so i ll save it in a variable
 helloFile.close() #then i need to close the file
 print(content)
+print('\n\n\n')
 
 #there is also a readlines method
 helloFile = open('c:\\Python39\\Python_Code\\python_notes\\classes\\simple_text.txt')
@@ -85,7 +86,7 @@ mytext = open('c:\\Users\\Aristos\\Desktop\\text.txt','w')
 mytext.write('I am a simple text')
 shutil.copy('c:\\Users\\Aristos\\Desktop\\text.txt', 'c:\\delicious') #this will copy shelve_text.txt to the folder delicious
 shutil.copy('c:\\Users\\Aristos\\Desktop\\text.txt', 'c:\\delicious\\spamspamspam.txt') #this will copy and rename the shelve_text.txt file to the delicious folder
-
+mytext.close()
 #to copy an entire folder (and rename it in this case)
 shutil.copytree('c:\\delicious', 'c:\\delicious_backup') #this command will create a new folder named "delicious_backup"
 #to move a file
@@ -117,5 +118,6 @@ for filename in os.listdir():
 
 import send2trash
 mytext = open('c:\\Users\\Aristos\\Desktop\\text2.txt','w') #create this short-life txt file.
+mytext.close()
 send2trash.send2trash('c:\\Users\\Aristos\\Desktop\\text2.txt') #send it to the recycle bin, where it belongs.
 
