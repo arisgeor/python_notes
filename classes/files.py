@@ -75,7 +75,17 @@ myFile = shelve.open('mydata')
 list(myFile.keys())
 list(myFile.values())
 
+#copying and moving files
+import shutil
+shutil.copy('c:\\spam.txt', 'c:\\delicious') #this will copy spam.txt to the folder delicious
+shutil.copy('c:\\spam.txt', 'c:\\delicious\\spamspamspam.txt') #this will copy and rename the spam.txt file to the delicious folder
 
+#to copy an entire folder (and rename it in this case)
+shutil.copytree('c:\\delicious', 'c:\\delicious_backup')
+#to move a file
+shutil.move('c:\\spam.txt', 'c:\\delicious\\walnut')
+#if i want to rename a file i just move it to the same folder with a different name
+shutil.move('c:\\delicious\\walnut\\spam.txt', 'c:\\delicious\\walnut\\eggs.txt')
 
 
 
