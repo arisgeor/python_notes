@@ -57,3 +57,26 @@ helloFile.write('Hello !!!\n')
 helloFile.close() #don't forget to close the file!
 helloFile = open('c:\\Python39\\Python_Code\\python_notes\\classes\\simple_text2.txt', 'a') #the 'a' indicates the write mode
 helloFile.write('\n\nHello again!!!\n')
+
+
+#I can save variables in my file using the shelve module, like list and dictionaries
+import shelve
+myFile = shelve.open('mydata')
+#i can make changes to the shelve value as if it was a dict.
+myFile['cats'] = ['Zophie', 'Pooka', 'Simon'] #so i saved a list of strings as a value to the key "cats"
+#this will crete 3 binary files (.bak .dat .dir) and a db file on linux
+myFile.close()
+
+myFile = shelve.open('mydata')
+myFile['cats'] #this will return the Value of the key cats (the list of names)
+myFile.close()
+
+myFile = shelve.open('mydata')
+list(myFile.keys())
+list(myFile.values())
+
+
+
+
+
+
