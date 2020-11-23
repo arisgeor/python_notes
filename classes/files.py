@@ -4,7 +4,7 @@
 print('\\') #this will print "\"
 print('c:\\spam\\eggs.png')
 #or alternative use raw strings 
-print(r'c:/Python39/Python_Code/python_notes')
+print(r'c:\Python39\Python_Code\python_notes')
 
 import os #path related functions
 os.path.join('folder1','folder2','folder3') #joins the path according to your OS
@@ -29,12 +29,13 @@ os.listdir('c:\\') #return a list of strings with the files and folders containe
 #simple example
 #calculates the size of all the files inside a directory
 totalsize = 0
-for filename in os.listdir('c:\\automatebook'):
+for filename in os.listdir('c:\\Python39\\Python_Code\\python_notes\\classes'):
     if not os.path.isfile(os.path.join('c:\\automatebook', filename)): #get rid of subfolders and just keep the files
         continue
     totalsize += os.path.getsize(os.path.join('c:\\automatebook', filename))
 
-os.makedirs('c:\\delicious\\walnut\\waffles') #this func will create all these folders to complete the path!
+#this func will create all these folders 
+os.makedirs('c:\\delicious\\walnut\\waffles') 
 
 #there are 2 types of files
 #plain text and
@@ -45,13 +46,15 @@ helloFile = open('c:\\Python39\\Python_Code\\python_notes\\classes\\simple_text.
 content = helloFile.read() #if i want to read the file i ll need to reuse this line, so i ll save it in a variable
 helloFile.close() #then i need to close the file
 print(content)
-helloFile.close()
+
 #there is also a readlines method
+helloFile = open('c:\\Python39\\Python_Code\\python_notes\\classes\\simple_text.txt')
 helloFile.readlines() #This will return all of the lines as a list of strings
+helloFile.close()
 
 #if i want to write to a file i need to open it to write or append mode
 #write mode will overwrite the file data, whereas append will add to the end of the file
-#if the file doesn't exist, python will create it!
+#if the file doesn't exist, python will create it, as long as it has the w or a flag!
 helloFile = open('c:\\Python39\\Python_Code\\python_notes\\classes\\simple_text2.txt', 'w') #the 'w' indicates the write mode
 helloFile.write('Hello !!!\n')
 helloFile.close() #don't forget to close the file!
@@ -61,32 +64,35 @@ helloFile.write('\n\nHello again!!!\n')
 
 #I can save variables in my file using the shelve module, like list and dictionaries
 import shelve
-myFile = shelve.open('mydata')
+myFile = shelve.open('c:\\Users\\Aristos\\Desktop\\shelve_text.txt') #this will create the file if if doesnt exist already
 #i can make changes to the shelve value as if it was a dict.
 myFile['cats'] = ['Zophie', 'Pooka', 'Simon'] #so i saved a list of strings as a value to the key "cats"
 #this will crete 3 binary files (.bak .dat .dir) and a db file on linux
 myFile.close()
 
-myFile = shelve.open('mydata')
+myFile = shelve.open('c:\\Users\\Aristos\\Desktop\\shelve_text.txt')
 myFile['cats'] #this will return the Value of the key cats (the list of names)
 myFile.close()
 
-myFile = shelve.open('mydata')
+myFile = shelve.open('c:\\Users\\Aristos\\Desktop\\shelve_text.txt')
 list(myFile.keys())
 list(myFile.values())
+myFile.close()
 
 #copying and moving files
 import shutil
-shutil.copy('c:\\spam.txt', 'c:\\delicious') #this will copy spam.txt to the folder delicious
-shutil.copy('c:\\spam.txt', 'c:\\delicious\\spamspamspam.txt') #this will copy and rename the spam.txt file to the delicious folder
+mytext = open('c:\\Users\\Aristos\\Desktop\\text.txt','w')
+mytext.write('I am a simple text')
+shutil.copy('c:\\Users\\Aristos\\Desktop\\text.txt', 'c:\\delicious') #this will copy shelve_text.txt to the folder delicious
+shutil.copy('c:\\Users\\Aristos\\Desktop\\text.txt', 'c:\\delicious\\spamspamspam.txt') #this will copy and rename the shelve_text.txt file to the delicious folder
 
 #to copy an entire folder (and rename it in this case)
-shutil.copytree('c:\\delicious', 'c:\\delicious_backup')
+shutil.copytree('c:\\delicious', 'c:\\delicious_backup') #this command will create a new folder named "delicious_backup"
 #to move a file
-shutil.move('c:\\spam.txt', 'c:\\delicious\\walnut')
+shutil.move('c:\\delicious\\spamspamspam.txt', 'c:\\delicious\\walnut')
 #if i want to rename a file i just move it to the same folder with a different name
-shutil.move('c:\\delicious\\walnut\\spam.txt', 'c:\\delicious\\walnut\\eggs.txt')
+shutil.move('c:\\delicious\\walnut\\spamspamspam.txt', 'c:\\delicious\\walnut\\eggs.txt')
 
-
+#Deleting files and folders
 
 
