@@ -17,8 +17,8 @@ os.getcwd()
 #If i have 2 files named eggs.txt the relative path will refer to the eggs inside the cwd
 
 os.path.isabs('c:\\folder\\folder')
-os.path.dirname('c:\\folder1\\folder2\\spam.png') # will return the directory of the path, up to spam.png
-os.path.basename('c:\\folder1\\folder2\\spam.png')# will return the last part of the path, after the final set of \\
+os.path.dirname('c:\\folder1\\folder2\\spam.png') #will return the directory of the path, up to spam.png
+os.path.basename('c:\\folder1\\folder2\\spam.png') #will return the last part of the path, after the final set of \\
 os.path.exists('c:\\folder1\\folder2\\spam.png') #returns True if the path exists
 os.path.isfile('c:\\windows\\system32\\calc.exe') #returns True if the final part of the path is a file.
 os.path.isdir('c:\\windows\\system32\\calc.exe') #similarly this will return True is the final part of the path is a directory
@@ -102,7 +102,7 @@ os.rmdir('c:\\empty_folder')
 # you will have to use shutil.rmtree() to entirely delete a folder with files
 shutil.rmtree('c:\\delicious')
 shutil.rmtree('c:\\delicious_backup')
-# I deleted the folders and files I created previously, to be able to rerun the program without crashes
+# I deleted the folders and files I created previously, to be able to rerun the program without crashing it
 
 # The best practice before deleting files is to do a "Dry Run"
 import os
@@ -121,3 +121,20 @@ mytext = open('c:\\Users\\Aristos\\Desktop\\text2.txt','w') #create this short-l
 mytext.close()
 send2trash.send2trash('c:\\Users\\Aristos\\Desktop\\text2.txt') #send it to the recycle bin, where it belongs.
 
+# the os.walk() function
+for folderName, subfolders, filenames in os.walk('c:\\Python39\\Python_Code\\python_notes'):
+    print('The folder is ' + folderName)
+    print('The subfolders in ' + folderName + ' are: ' + str(subfolders))
+    print('The filenames in ' + folderName + ' are: ' + str(subfolders))
+    print()
+
+    for subfolder in subfolders:
+        if 'fish' in subfolder:
+            os.rmdir(subfolder)
+        
+    for file in filenames:
+        if file.endswith('.py'):
+            break
+            #send2trash.send2trash(file)
+
+#i can do a lot of cool stuff with os.walk()!
