@@ -66,3 +66,41 @@ list(zip(d1,d2))
 
 list(zip(d2,d1.values()))
 
+### enumerate() !!!
+# Enumerate allows you to keep a count as you iterate through an object. It does this by returning 
+# a tuple in the form (count,element). Extremely usefull!
+
+lst = ['a','b','c']
+
+for number,item in enumerate(lst):
+    print(number)
+    print(item)
+
+#enumerate() becomes particularly useful when you have a case where you need to have some sort of tracker
+for count,item in enumerate(lst):
+    if count >= 2:
+        break
+    else:
+        print(item)
+
+#enumerate() takes an optional "start" argument to override the default value of zero:
+months = ['March','April','May','June']
+list(enumerate(months,start=3))  #since enumerate is an iterator i ll cast it in a list!
+
+
+### any() and all()
+# all() will return True if all elements in a list are True
+# any() will return True if at least one element in the list is True
+lst = [True,True,False,True]
+all(lst) # --> False
+any(lst) # --> True
+
+### complex()
+# Complex() returns a complex number with the value real + imag*1j or converts a string or number to a complex number.
+
+# Create 2+3j
+complex(2,3)
+#We can also pass strings:
+complex('12+2j')
+#If the first parameter is a string, it will be interpreted as a complex number and the function must be called without 
+# a second parameter. The second parameter can never be a string
