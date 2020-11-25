@@ -4,6 +4,9 @@ class Circle:
     """
     A simple class implementing a circle
     """
+#the avove lines starting with triple quotes, are called a docstring. 
+#docstrigs contain usufull info about the class or function and act as documentantion
+#Type help(Circle) to return the docstring
 
     pi = 3.14
 
@@ -53,8 +56,9 @@ class Animal:
 
 
 class Dog(Animal):
-    def __init__(self):
+    def __init__(self, name = 'doggo'):
         Animal.__init__(self)
+        self.name = name
         print("Dog created")
 
     def whoAmI(self):
@@ -63,6 +67,65 @@ class Dog(Animal):
     def bark(self):
         print("Woof!")
 
+    def speak(self):
+        return self.name + ' says Woof' # this method is used in the next example
+
+
 d = Dog()
 d.eat()
 d.bark()
+print('\n')
+
+### Polymorphism
+#In Python, polymorphism refers to the way in which different object classes can share the same method name, 
+#and those methods can be called from the same place even though a variety of different objects might be passed in. 
+#The best way to explain this is by example:
+
+class Cat:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return self.name+' says Meow!' 
+    
+
+niko = Dog('Niko')
+felix = Cat('Felix')
+
+print(niko.speak())
+print(felix.speak())
+print('\n')
+
+for pet in [niko,felix]:
+    print(pet.speak())
+
+print('\n')
+
+#Special Methods
+#Classes in Python can implement certain operations with special method names. 
+#These methods are not actually called directly but by Python specific language syntax. For example:
+
+class Book:
+
+    def __init__(self, title, author, pages):
+        print("A book is created")
+        self.title = title
+        self.author = author
+        self.pages = pages
+
+    def __str__(self):
+        return "Title: %s, author: %s, pages: %s" %(self.title, self.author, self.pages)
+
+    def __len__(self):
+        return self.pages
+
+    def __del__(self):
+        print("A book is destroyed")
+
+book = Book("Python Rocks!", "Arisgeor", 169)
+
+#Special Methods
+print(book)
+print(len(book))
+del book
+
