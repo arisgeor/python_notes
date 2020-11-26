@@ -1,3 +1,6 @@
+#!python 3 
+import pprint
+
 print('what is your age?')
 age = input() #input is a string value, thats why i can use it below without typecasting it
 print("your age is " + age)
@@ -17,11 +20,11 @@ cheese[1] = 'Hello'
 #If you print either cheese or spam you will get the same result
 # [0, 'Hello', 2, 3, 4, 5]
 
-def listapend(list):
-	list.apend('Hello')
+def listappend(list):
+	list.append('Hello')
 
 spam = ['1, 2, 3']
-listapend(spam)
+listappend(spam)
 print(spam)
 #changes made on a list inside a function will affect the 
 #list outside the function as well!
