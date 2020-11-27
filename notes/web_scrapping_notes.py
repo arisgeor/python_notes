@@ -41,4 +41,34 @@ elems = soup.select('#sku-details > div.section.content > div.details > div.vari
 elems[0].text.strip() #turn the first element of the selection into a string and strip all the unnecessary \n and \t
 
 
+### Selenium
 
+#pip install selenium
+
+from selenium import webdriver
+browser = webdriver.Firefox() #geckodriver needs to be in the PATH (placed geckodriver.exe in notes folder)
+
+browser.get('https://automatetheboringstuff.com') #after i open the browser I can control it with browser. !
+
+elem = browser.find_element_by_css_selector('.main > div:nth-child(1) > ul:nth-child(21) > \
+    li:nth-child(1) > a:nth-child(1)') #copy the CSS selector of the element you want
+elem.click()
+
+elems = browser.find_element_by_css_selector('p')
+len(elems)
+
+searchElem = browser.find_element_by_css_selector('.search-field')
+searchElem.send_keys('Cat')
+searchElem.submit() #Selenium automatically detects the submit button of the form and does the job!
+
+browser.back() #works like a back button
+browser.forward()
+browser.refresh()
+browser.quit()
+
+browser.get('https://automatetheboringstuff.com') #after i open the browser I can control it with browser. !
+elem = browser.find_element_by_css_selector('html') #select the entire page
+print(elem.text) #to get the entire webpage!
+
+#read the full documentation at
+#selenium-python.readthedocs.org
