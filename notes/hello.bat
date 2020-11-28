@@ -1,2 +1,2 @@
-@py C:\Python39\Python_Code\python_notes\classes\hello.py %*
+@py c:\Python39\Python_Code\python_notes\notes\hello.py %*
 @pause
