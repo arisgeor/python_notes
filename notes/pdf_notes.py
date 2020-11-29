@@ -39,3 +39,5 @@ writer.write(outputFile) #and I pass it to my "writer" object
 outputFile.close()
 pdf1File.close()
 pdf2File.close()
+
+#that it for now!
