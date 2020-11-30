@@ -15,3 +15,4 @@ import webbrowser
 import requests #pip install requests
 import bs4 #pip install beautifulsoup4
 from selenium import webdriver #pip install selenium
+import rich #pip install rich
