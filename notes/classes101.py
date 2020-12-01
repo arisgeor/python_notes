@@ -59,7 +59,7 @@ class Dog(Animal):
     #The child's __init__() function overrides the inheritance of the parent's __init__() function.
     def __init__(self, name = 'doggo'): 
         #To keep the inheritance of the parent's __init__() function, add a call to the parent's __init__() function:
-        Animal.__init__() # super().__init__() super doesnt need the self, only the arguments.
+        Animal.__init__(self) # super().__init__() super doesnt need the self, only the arguments.
         self.name = name
         print("Dog created")
 
