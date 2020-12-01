@@ -4,9 +4,9 @@ class Circle:
     """
     A simple class implementing a circle
     """
-#the avove lines starting with triple quotes, are called a docstring. 
-#docstrigs contain usufull info about the class or function and act as documentantion
-#Type help(Circle) to return the docstring
+    #the avove lines starting with triple quotes, are called a docstring. 
+    #docstrigs contain usufull info about the class or function and act as documentantion
+    #Type help(Circle) to return the docstring
 
     pi = 3.14
 
@@ -56,8 +56,10 @@ class Animal:
 
 
 class Dog(Animal):
-    def __init__(self, name = 'doggo'):
-        Animal.__init__(self)
+    #The child's __init__() function overrides the inheritance of the parent's __init__() function.
+    def __init__(self, name = 'doggo'): 
+        #To keep the inheritance of the parent's __init__() function, add a call to the parent's __init__() function:
+        Animal.__init__() # super().__init__() super doesnt need the self, only the arguments.
         self.name = name
         print("Dog created")
 
