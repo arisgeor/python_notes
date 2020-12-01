@@ -50,3 +50,4 @@ print(newlist)
 # which you can manipulate before it ends up like a list item in the new list:
 newlist = [x.upper() for x in fruits]
 newlist = [x if x != "banana" else "orange" for x in fruits]
+
