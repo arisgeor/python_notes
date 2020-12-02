@@ -1,0 +1,51 @@
+# A collection of usufull git commands.
+
+
+git clone <https://name-of-the-repository-link> #Git clone basically makes an identical copy of 
+#the latest version of a project in a repository and saves it to your computer.
+
+git status # gather information (push,pulls,stages etc)
+
+git add <file> #stage a single file.
+
+git commit -m "commit message" #always include a short memo.
+git push <remote> <branch-name> #send your changes to the remote server.
+# if you just type git push you mean remote == origin, branch-name == master.
+
+git branch #create a new branch, rarely used.
+git checkout <name-of-your-branch> #switch to specified branch
+git checkout -b <name-of-your-branch> #create a new branch and switch to it! Mostly used.
+git diff <branch_1> <branch_2> #to view the differences.
+
+git push -u origin <branch> #u always need to add -u flag when the branch is new, in order to track it.
+
+git branch #to view branches
+git branch --list #to view branches
+git branch -d <branch-name> #to delete a branch
+
+#to rename a branch:
+git checkout <old-name> # Checkout to the branch you need to rename
+git branch -m <new-name> # Rename branch name locally
+git push origin :<old-name> <new-name> #Delete old branch from remote.
+git push origin -u <new-name> #reset the upstream branch.
+
+git pull <remote> 
+#The git pull command is used to get updates from the remote repo.
+#This command is a combination of git fetch and git merge which means that, when we use git pull, it gets the updates 
+#from remote repository (git fetch) and immediately applies the latest changes in your local (git merge).
+
+
+#the final step is merging the branch with the parent branch (dev or master)
+#For example, when you want to merge your feature branch into the master branch
+git checkout master
+git fetch
+git merge <branch-name> #merge the branch to the master. This is not the same as merging master to the branch!
+git log --oneline #to get the id of the merge commit
+git revert -m 1 <merge-commit-id> #to revert a merge. Make sure you have checked out master. 
+
+#git force pull: overwrite local with git pull
+git stash #to put local changes aside
+git pull #to now safely pull all remote changes
+#optional git stash apply to bring back your changes.
+
+
