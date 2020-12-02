@@ -1,7 +1,4 @@
 # python_notes
-Snake Jazz
-
-
 
 Rules:
 1)Code Everyday: Consistency is very important when you are learning a new language. consider starting small with 25 minutes everyday and working your way up from there.
