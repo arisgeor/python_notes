@@ -27,5 +27,6 @@ from selenium import webdriver #pip install selenium
 import rich                 #pip install rich
 import PIL                  #pip install Pillow 
 import numpy                #pip install numpy
+import pandas               #pip install pandas
 import cv2                  #pip install opencv-python
 import pygame               #pip install -U pygame --user #python3 -m pygame.examples.aliens to check if it worked :P
