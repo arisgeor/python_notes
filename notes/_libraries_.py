@@ -13,8 +13,10 @@ import shelve
 import re
 import webbrowser
 import pyperclip
+import smtplib 
 
 #
+import pyautogui            #pip install pyautogui
 import PyPDF2               #pip install PyPDF2
 import docx                 #pip install python-docx
 import openpyxl             #pip install openpyxl 
