@@ -4,6 +4,7 @@
 #those that need to be istalled have a comment next to them.
 
 #Standard Library
+import time
 import datetime
 import json
 import tkinter
