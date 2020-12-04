@@ -13,8 +13,8 @@ git push <remote> <branch-name> #send your changes to the remote server.
 # if you just type git push you mean remote == origin, branch-name == master.
 
 git branch #create a new branch, rarely used.
-git checkout <name-of-your-branch> #switch to specified branch
-git checkout -b <name-of-your-branch> #create a new branch and switch to it! Mostly used.
+git checkout <branch> #switch to specified branch
+git checkout -b <branch> #create a new branch and switch to it! Mostly used.
 git diff <branch_1> <branch_2> #to view the differences.
 
 git push -u origin <branch> #u always need to add -u flag when the branch is new, in order to track it.

@@ -14,3 +14,6 @@ conn.quit()
 #Gmail --> smtp.gmail.com, 587
 #Outlook --> smtp-mail.outlook.com, 587
 #Yahoo --> smtp.mail.yahoo.com, 587
+
+#you can also check your inbox, which is kinda complicated. 
+#you can always check IMAP documentataion.
