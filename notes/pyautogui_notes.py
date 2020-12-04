@@ -45,3 +45,14 @@ pyautogui.KEYBOARD_KEYS
 pyautogui.typewrite(['enter'])#is the same as:
 pyautogui.press('enter')    # press the Enter key
 pyautogui.keyDown('shift')  # hold down the shift key #usufull for Shift+other_keys
+
+###screenshots
+
+pyautogui.screenshot()                              #this will return a Pillow object (PIL)
+pyautogui.screenshot('c:\\screenshot_example.png')  #this will save the file.
+
+pyautogui.locateOnScreen('c:\\my_screenshot.png')                 #where element is just the path of the image I want to locate on the screen.
+pyautogui.locateCenterOnScreen('c:\\my_screenshot.png')           #returns just the first to values of the tuple. Then i can do:
+pyautogui.moveTo((932,336), duration = 1) 
+pyautogui.click((932,336))                          #or pyautogui.click(932,336)  works just as well without the ()     
+
