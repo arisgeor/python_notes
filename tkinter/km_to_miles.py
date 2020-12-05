@@ -14,7 +14,7 @@ def km_to_miles():
 
 b1 = Button(window, text = 'Execute', command = km_to_miles)    #create the button #'text' needs to be lowercase...
 b1.grid(row=0,column=0)                                         #actually place it inside the window
-#Button(window, text = 'Execute', command = km_to_miles).b1.grid(row=0,column=0) #You could also type it this way
+#Button(window, text = 'Execute', command = km_to_miles).grid(row=0,column=0) #You could also type it this way
 
 e1_value=StringVar()                                            #Create a special StringVar object
 e1 = Entry(window, textvariable = e1_value)
