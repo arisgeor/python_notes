@@ -6,7 +6,7 @@ root = Tk() #our widget
 
 #create a label widget and shove it into the screen 
 myLabel1 = Label(root, text = 'Hello World!')
-myLabel2 = Label(root, text ='My name is Aris Geor')
+myLabel2 = Label(root, text ='My name is Aris')
 #myLabel1.pack() #the first most unsophisticated method to add stuff.
 
 myLabel1.grid(row=0,column=0)
