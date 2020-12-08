@@ -30,3 +30,4 @@ import numpy                #pip install numpy
 import pandas               #pip install pandas
 import cv2                  #pip install opencv-python
 import pygame               #pip install -U pygame --user #python3 -m pygame.examples.aliens to check if it worked :P
+from pyowm.owm import OWM   #pip install pyowm
