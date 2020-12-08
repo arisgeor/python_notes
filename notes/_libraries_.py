@@ -17,17 +17,17 @@ import pyperclip
 import smtplib 
 
 #
-import pyautogui            #pip install pyautogui
-import PyPDF2               #pip install PyPDF2
-import docx                 #pip install python-docx
-import openpyxl             #pip install openpyxl 
-import requests             #pip install requests
-import bs4                  #pip install beautifulsoup4
-from selenium import webdriver #pip install selenium
-import rich                 #pip install rich
-import PIL                  #pip install Pillow 
-import numpy                #pip install numpy
-import pandas               #pip install pandas
-import cv2                  #pip install opencv-python
-import pygame               #pip install -U pygame --user #python3 -m pygame.examples.aliens to check if it worked :P
-from pyowm.owm import OWM   #pip install pyowm
+import pyautogui                #pip install pyautogui
+import PyPDF2                   #pip install PyPDF2
+import docx                     #pip install python-docx
+import openpyxl                 #pip install openpyxl 
+import requests                 #pip install requests
+import bs4                      #pip install beautifulsoup4
+from selenium import webdriver  #pip install selenium
+import rich                     #pip install rich
+import PIL                      #pip install Pillow 
+import numpy                    #pip install numpy
+import pandas                   #pip install pandas
+import cv2                      #pip install opencv-python
+import pygame                   #pip install -U pygame --user #python3 -m pygame.examples.aliens to check if it worked :P
+from pyowm.owm import OWM       #pip install pyowm
