@@ -19,7 +19,7 @@ phoneRegex = re.compile(r'''
                     #the entire matched text
 
 
-emailRegex = re.complile(r'''
+emailRegex = re.compile(r'''
 #some.+_thing@(\d{2,5}))?.com
 
 [a-zA-Z0-9_.+]+  #name part (i created my own character class) i cannot just use \w.
