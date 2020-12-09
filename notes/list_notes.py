@@ -9,7 +9,7 @@ my_string.split() #['hey', 'you'] notice the difference between the two.
 name = 'John:Castle'
 name.split(':') #['John', 'Castle'] , very useful.
 
-### list methods
+### list common methods
 
 spam = ['cat', 'dog', 'bat']
 spam.index('dog') #returns the index of the element starting from 0.
@@ -25,6 +25,7 @@ spam.extend(name.split(':')) #['cat', 'dog', 'bat', 'John', 'Castle']
 list3 = spam + name.split(':') #I could have done it this way as well.
 
 #to remove elements:
+
 spam.remove('bat') # Thats cool because it allows you to specify a value to be removed.
 # .remove will only remove the first instance of the specified element, not all of them!
 # you can always delete by index:
@@ -54,6 +55,7 @@ cheese = my_list
 cheese[1] = 'Hello' #If you print either cheese or spam you will get the same result since they have the same reference.
 
 ### List comprehension
+
 # The syntax is:
 # newlist = [expression for item in iterable if condition == True]
 fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
