@@ -1,5 +1,9 @@
 # A collection of usufull git commands.
 
+git init
+#then create a new repo online.
+git remote add origin git@github.com:username/new_repo  #for when you have established an ssh key.
+git push -u origin master
 
 git clone <https://name-of-the-repository-link> #Git clone basically makes an identical copy of 
 #the latest version of a project in a repository and saves it to your computer.
@@ -49,3 +53,6 @@ git pull #to now safely pull all remote changes
 #optional git stash apply to bring back your changes.
 
 
+#to add aliases in Windows env
+#open the .gitconfig at C:\Users\Aristos and add your aliases. For example:
+qp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
