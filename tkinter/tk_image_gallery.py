@@ -17,6 +17,10 @@ my_img5 = ImageTk.PhotoImage(Image.open(r'C:\Users\Aristos\Desktop\Aristos\rando
 
 image_list =[my_img1, my_img2, my_img3, my_img4, my_img5]
 
+status = Label(root, text = 'Image 1 out of ' + str(len(image_list)), bd = 1, relief = SUNKEN, anchor = E) 
+#bd defines the border and relief will make it sunken, almost 3D like. Finaly anchor will 'anchor' it to one side, here to the East.
+#finally as with the images, this label needs to be updated each time I press the forward or back buttons.
+
 my_label = Label(image=my_img1)
 my_label.grid(row=0, column=0, columnspan=3)
 
@@ -34,11 +38,15 @@ def forward(image_number):              #everytime the function is called I rebu
         button_forward = Button(root, text = '>>', state = DISABLED)
 
     #finaly when everything is checked I place the elements.
+    my_label.grid(row=0, column=0, columnspan=3)
     button_forward.grid(row = 1, column = 2)
     button_back.grid(row = 1, column = 0)
-    my_label.grid(row=0, column=0, columnspan=3)
 
-    return
+    #update the status bar as well
+    status = Label(root, text = 'Image ' + str(image_number) + ' out of ' + str(len(image_list)), bd = 1, relief = SUNKEN, anchor = E) 
+    status.grid(row = 2, column = 0 , columnspan = 3, sticky = W+E) 
+
+    
 
 def back(image_number):
     global my_label
@@ -58,6 +66,10 @@ def back(image_number):
     button_back.grid(row = 1, column = 0)
     my_label.grid(row=0, column=0, columnspan=3)
 
+    #update the status bar as well
+    status = Label(root, text = 'Image ' + str(image_number) + ' out of ' + str(len(image_list)), bd = 1, relief = SUNKEN, anchor = E) 
+    status.grid(row = 2, column = 0 , columnspan = 3, sticky = W+E)
+
 
 #This is where I Click the first time and then the above functions take over!
 button_back = Button(root, text = '<<', command = back, state = DISABLED)
@@ -66,6 +78,7 @@ button_forward = Button(root, text = '>>', command = lambda: forward(2))
 
 button_back.grid(row = 1, column = 0)
 button_exit.grid(row = 1, column = 1)
-button_forward.grid(row = 1, column = 2)
+button_forward.grid(row = 1, column = 2, pady = 10)
+status.grid(row = 2, column = 0 , columnspan = 3, sticky = W+E) #Tkinter has a compass like navigation system NESW, and here I told it to stick to West and East.
 
 root.mainloop()
