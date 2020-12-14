@@ -4,7 +4,7 @@ from tkinter import *
 from PIL import ImageTk, Image
 
 root = Tk()
-root.title('Coding Lessons by Aris')
+root.title('Frames!')
 root.iconbitmap(r'C:\Users\Aristos\Desktop\Aristos\random_pics\pacman.ico')
 
 frame = LabelFrame(root, text = 'This is my Frame', padx = 50, pady=50)
