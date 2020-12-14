@@ -19,6 +19,7 @@ PIZZA_LIST = [
 pizza = StringVar() #track the variable of the radio buttons!
 pizza.set("Pepperoni") #set the 1st.
 
+#Creating all the radio button options with a loop is way cleaner.
 for pizza_num, flavor in PIZZA_LIST:
     Radiobutton(root, text = pizza_num + ' : ' + flavor, variable = pizza, value = flavor).pack(anchor=W)
 
