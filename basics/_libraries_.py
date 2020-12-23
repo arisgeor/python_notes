@@ -31,3 +31,15 @@ import pandas                   #pip install pandas
 import cv2                      #pip install opencv-python
 import pygame                   #pip install -U pygame --user #python3 -m pygame.examples.aliens to check if it worked :P
 from pyowm.owm import OWM       #pip install pyowm
+
+from flask import Flask         #pip install Flask
+#for Flask, first open the powershell as an admin and type: 
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine #then choose 'A'
+#then, create your project folder and inside it
+py -m venv env                  #to create the virtual enviroment "env"
+# Then, env\Scripts\activate 
+#to activate it and finaly after you create 'yourfile.py'
+set FLASK_APP=yourfile.py
+flask run
+
+
