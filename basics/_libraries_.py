@@ -33,7 +33,7 @@ import pygame                   #pip install -U pygame --user #python3 -m pygame
 from pyowm.owm import OWM       #pip install pyowm
 
 from flask import Flask         #pip install Flask
-#for Flask, first open the powershell as an admin and type: 
+#for Flask, first open the powershell as an admin and type: (do this once)
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine #then choose 'A'
 #then, create your project folder and inside it
 py -m venv env                  #to create the virtual enviroment "env"
