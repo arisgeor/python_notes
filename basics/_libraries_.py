@@ -43,3 +43,16 @@ set FLASK_APP=yourfile.py
 flask run
 
 
+#to package a KivyApp
+#first enter your virtual enviroment
+pip install pyinstaller
+pyinstaller yourfile.py -w #for windows
+#then you need to make changes on spec.py
+from kivy_deps import sdl2, glew
+#between pyz and exe
+a.datas += [('Code\calc.kv','C:\\....\\yourdirectory\\yourfile.kv','DATA')]
+#then go down to coll, right after exe put:
+Tree('C:\\....\\yourdirectory\\yourfile.kv') #and after a.datas:
+*[Tree(p) for p in (sdl2.dep_bins + glew.dep_bins)]
+#Then on the terminal again:
+pyinstaller yourfile.spec -y
