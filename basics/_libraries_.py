@@ -42,6 +42,13 @@ py -m venv env                  #to create the virtual enviroment "env"
 set FLASK_APP=yourfile.py
 flask run
 
+#to install kivy
+#first make a virtual enviroment to the folder.
+python -m venv virt #i named in virt
+#then I did:
+virt\Scripts\activate #to turn it on, and then
+pip install kivy[full] kivy-examples #this will take a long time...
+#then you can always pip freeze to see what you 've installed.
 
 #to package a KivyApp
 #first enter your virtual enviroment
