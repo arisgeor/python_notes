@@ -26,10 +26,11 @@ import bs4                      #pip install beautifulsoup4
 from selenium import webdriver  #pip install selenium
 import rich                     #pip install rich
 import PIL                      #pip install Pillow 
-import numpy                    #pip install numpy
+import numpy                    #pip install numpy==1.19.3          #This version is bug free.
 import pandas                   #pip install pandas
-import cv2                      #pip install opencv-python
-import pygame                   #pip install -U pygame --user #python3 -m pygame.examples.aliens to check if it worked :P
+import cv2 as cv                #pip install opencv-contrib-python  #this will include all packages.
+import caer                     #pip install caer                   #works well with cv2.
+import pygame                   #pip install -U pygame --user #python3 -m pygame.examples.aliens #to check if it worked :P
 from pyowm.owm import OWM       #pip install pyowm
 import oauth2client             #pip install oauth2client
 import httplib2                 #pip install httplib2
