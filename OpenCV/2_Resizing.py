@@ -14,10 +14,10 @@ def rescaleFrame(frame, scale = 0.5):
 img = cv.imread('Photos/cat.jpg')
 img_resized = rescaleFrame(img)
 
-cv.imshow('Cat', img)               #displayes an image (the argument img)
+cv.imshow('Cat', img)               
 cv.imshow('Cat_resized', img_resized)
 
-cv.waitKey(0)                       #waits for an inf amount of time
+cv.waitKey(0)                       
 
 ###Videos###
 

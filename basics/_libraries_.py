@@ -26,7 +26,7 @@ import bs4                      #pip install beautifulsoup4
 from selenium import webdriver  #pip install selenium
 import rich                     #pip install rich
 import PIL                      #pip install Pillow 
-import numpy                    #pip install numpy==1.19.3          #This version is bug free.
+import numpy as np              #pip install numpy==1.19.3          #This version is bug free.
 import pandas                   #pip install pandas
 import cv2 as cv                #pip install opencv-contrib-python  #this will include all packages.
 import caer                     #pip install caer                   #works well with cv2.
