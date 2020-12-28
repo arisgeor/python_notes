@@ -31,16 +31,21 @@ import pandas                   #pip install pandas
 import cv2                      #pip install opencv-python
 import pygame                   #pip install -U pygame --user #python3 -m pygame.examples.aliens to check if it worked :P
 from pyowm.owm import OWM       #pip install pyowm
+import oauth2client             #pip install oauth2client
+import httplib2                 #pip install httplib2
 
-from flask import Flask         #pip install Flask
+### Flask
+
 #for Flask, first open the powershell as an admin and type: (do this once)
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine #then choose 'A'
 #then, create your project folder and inside it
 py -m venv env                  #to create the virtual enviroment "env"
-# Then, env\Scripts\activate 
-#to activate it and finaly after you create 'yourfile.py'
+#Then, env\Scripts\activate to activate it
+pip3 install flask flask-sqlalchemy
+#finaly after you create 'yourfile.py'
 set FLASK_APP=yourfile.py
 flask run
+#or in one line --> FLASK_APP=yourfile.py flask run
 
 #to install kivy
 #first make a virtual enviroment to the folder.
