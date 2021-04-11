@@ -1,3 +1,5 @@
+#! python3 
+
 def high_and_low(numbers):
     #lst = list(numbers)  #initial mistake... list() will also include the spaces!
     new = numbers.split(' ') #split gives me the elements without the spaces
